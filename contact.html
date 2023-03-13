@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<!--I used P02 as reference -->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title> Contact </title>
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/queries.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <!-- logo in the top left -->
+    <div class="topnav">
+      <div class="topnav-left">
+        <a href="projects.html">
+          <span class="logo"> Liam Tangilag </span>
+        </a>
+      </div>
+    </div>
+
+    <!-- reference for sidenav from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav -->
+    <!-- reference for making sidenav accessible with tab index https://knowbility.org/blog/2020/accessible-slide-menus/ -->
+    <button class="icon-right-justified" onclick="openNav()">&#9776;</button>
+    <div id="mySidenav" class="sidenav inactive">
+      <a href="javascript:void(0)" role="button" class="closebtn" aria-label="close navigation" onclick="closeNav()">&times;</a>
+      <a href="contact.html">contact</a>
+      <a href="about.html">about</a>
+
+      <!-- drop down reference from https://stackoverflow.com/questions/35579569/hide-show-menu-onclick-javascript -->
+      <button id="menu" class="dropbtn" onclick="toggleMenu()"> projects <i class="small-arrow down"> </i></button>
+      <div id="menu-box" class="drop-content">
+        <a href="projects.html">overview</a>
+        <a href="poster.html">poster</a>
+        <a href="kinetic.html">motion graphic</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="container-contact">
+    <div class="block-contact" data-aos-duration="1000" data-aos="fade-right">
+      <h1> Let's get in touch! </h1>
+      <p> If you want to collaborate or simply connect, I can be reached at: </p>
+      <strong> liam_tangilag@sfu.ca </strong>
+    </div>
+  </section>
+
+  <footer class="section-divider-footer">
+    <div class="container-footer">
+      <p> ©2021 - Liam Tangilag | </p>
+      <a class="link" href="citations.html"> citations </a>
+      <a class="link" href="style-guide.html"> style guide </a>
+      <a class="link" href="https://github.com/leeummtee/P03"> github </a>
+    </div>
+  </footer>
+
+  <!-- linking the animation library  -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+  <script src="js/main.js"></script>
+</body>

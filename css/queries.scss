@@ -1,0 +1,462 @@
+/* resizing the pages for mobile*/
+@mixin zero-margin-left-right {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@mixin one-margin-left-right {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@mixin top-margin-padding-zero {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+@mixin flex-wrap-center{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media screen and (max-width: 457px) {
+
+  /*~~~~~~~~~~~~~~~~~~~~~~~ HOME PAGE ~~~~~~~~~~~~~~~~~~~~~~~~~*/
+  body {
+    @include zero-margin-left-right;
+  }
+
+  .block-projects h2 {
+    font-size: 2.2rem;
+  }
+
+  .header-text h1 {
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  #project-header {
+    font-size: 4.5rem;
+  }
+
+  .container-header {
+    margin-bottom: 7rem;
+  }
+
+  .container-projects {
+    padding-top: 20rem;
+    margin-top: 0;
+    margin-bottom: 5rem;
+  }
+
+  .block-projects p {
+    width: 100%;
+  }
+
+  .block-projects h2 {
+    max-width: 100vw;
+  }
+
+  .block-projects {
+    flex: 0 100%;
+    overflow: hidden;
+    margin-top: 5rem;
+    margin-bottom: -4rem;
+  }
+
+  .block-projects:nth-of-type(1) {
+    margin-top:20rem;
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+  }
+
+  .block-projects:nth-of-type(4) h2 {
+    font-size: 1.9rem;
+  }
+
+  .block-projects:nth-of-type(4) {
+    z-index: 1;
+    padding-top: 0rem;
+    margin-left: 0rem;
+    margin-bottom: 1rem;
+  }
+
+
+
+  /*~~~~~~~~~~~~~~~~~~~~~~~ DETAILED VIEW ~~~~~~~~~~~~~~~~~~~~~~~~~*/
+  .header-text-detailed {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    padding-top: 0rem;
+    position: absolute;
+    top: 20rem;
+    color: white;
+    left: 0;
+    text-align: center;
+  }
+
+  .container-summary {
+    margin-top: -20rem;
+    @include zero-margin-left-right;
+  }
+
+  .block-summary h2 {
+    max-width: 100%;
+    padding-top: 0;
+  }
+
+  #summary-padding-kinetic{
+    padding-top: 21rem;
+  }
+
+  .block-summary {
+    flex: 0 100%;
+    margin-top: 0;
+  }
+
+  .container-detailed {
+    @include zero-margin-left-right;
+    padding-top: 5rem;
+  }
+
+  .container-detailed p {
+    max-width: 100vw;
+  }
+
+  .block-detailed p {
+    width: 100vw;
+  }
+
+  .block-detailed:nth-of-type(3) {
+    margin-top: 0;
+  }
+
+  .block-detailed:nth-of-type(8) {
+    margin-top: 0;
+  }
+
+  .block-detailed:nth-of-type(9) {
+    margin-top: 5rem;
+  }
+
+  .block-detailed:nth-of-type(10) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .video-responsive {
+    margin-top: -1.5rem;
+  }
+
+  /*~~~~~~~~~~~~~~~~~~~~~~~ MOTION GRAPHIC PAGE ~~~~~~~~~~~~~~~~~~~~~~~~~*/
+  .container-header {
+    margin-bottom: 25rem;
+  }
+
+  .block-kinetic {
+    padding-bottom: 3rem;
+  }
+
+  .container-summary h2 {
+    font-size: 3rem;
+  }
+
+  .container-summary h3 {
+    font-size: 2.5rem;
+  }
+
+  .container-detailed h2 {
+    font-size: 3rem;
+  }
+
+  .container-detailed h3 {
+    font-size: 2.5rem;
+  }
+
+  .container-summary {
+    margin-bottom: 10rem;
+  }
+
+  .arrow {
+    margin-top: 2rem;
+  }
+
+  .active {
+    width: 20rem;
+  }
+
+  /*~~~~~~~~~~~~~~~~~~~~~~~ ABOUT PAGE ~~~~~~~~~~~~~~~~~~~~~~~~~*/
+  .container-about {
+    justify-content: center;
+    display: flex;
+    padding-bottom: 5rem;
+  }
+
+  .block-about {
+    flex-grow: 1;
+    flex: 0 100%;
+  }
+
+  .block-about p {
+    width: 100%;
+  }
+
+  .block-about h1 {
+    padding-top: 0rem;
+    width: 100%;
+    font-size: 3rem;
+    margin: 0rem;
+  }
+
+  .about-img {
+    float: left;
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+  }
+}
+
+/* Responsive navigation menu reference from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_topnav_centered */
+@media screen and (max-width: 800px) {
+  .button-nav {
+    text-align: center;
+    width: 100%;
+  }
+
+  .topnav-left {
+    padding-top: 4rem;
+    padding-left: 3rem;
+  }
+
+  .icon-right-justified {
+    position: absolute;
+    right: 0.5rem;
+    top: 4rem;
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    right: 1.25rem;
+    top: 2.5rem;
+    font-size: 60px;
+    margin-left: 50px;
+  }
+
+  .container-detailed {
+    @include zero-margin-left-right;
+  }
+
+  .container-projects {
+    padding-top: 0rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .image-link {
+    width: 100%;
+  }
+
+  .container-projects {
+    @include one-margin-left-right;
+    margin-bottom: 5rem;
+  }
+
+/* ~~~~~~~~~~~~~DETAILED VIEWS~~~~~~~~~~~~~~~ */
+  .container-detailed {
+    @include one-margin-left-right;
+    margin-top: -10rem;
+    margin-bottom: 10rem;
+  }
+
+  .container-detailed p {
+    width: 100%;
+    @include zero-margin-left-right;
+    max-width: 100%;
+  }
+
+  .container-summary {
+    @include one-margin-left-right;
+  }
+
+  .block-summary h2 {
+    width: 100%;
+  }
+
+  .block-summary {
+    flex: 0 100%;
+  }
+
+  .block-detailed {
+    flex: 0 100%;
+  }
+
+  .block-detailed h2 {
+    width: 100%;
+    margin-top: 10rem;
+  }
+
+  .block-detailed h3{
+    margin-top: 10rem;
+    margin-bottom: -1rem;
+  }
+
+  .block-detailed:nth-of-type(1){
+    margin-top: -10rem;
+  }
+
+  /* ~~~~~~~~~~~~~~~~~~~ about page ~~~~~~~~~~~~~~~~~~~~~~~~ */
+  .about-img {
+    width: 100%;
+  }
+}
+
+/* making the header text move to the center when the screen is small enough */
+/* also making the contact page elements space properly at smaller sizes */
+@media screen and (max-width: 1050px) {
+  .section-divider-footer {
+    margin-top: 1rem;
+  }
+
+  .container-projects {
+    overflow: hidden;
+    margin-top: -20rem;
+  }
+
+  /* rearrange order so title goes before pic */
+  #project2-desc {
+    padding-top: 5rem;
+    order: 3;
+  }
+
+  #project2-pic {
+    order: 4;
+  }
+
+
+
+  .button-nav {
+    width: 99%;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .block-projects {
+    flex: 0 100%;
+    @include zero-margin-left-right;
+  }
+
+  .block-projects h2 {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .block-projects p {
+    width: 100%;
+  }
+
+
+  /* realigning text */
+  .block-projects:nth-of-type(1) {
+    z-index: 1;
+    padding-top: 0rem;
+    @include zero-margin-left-right;
+  }
+
+  .block-projects:nth-of-type(4) {
+    z-index: 1;
+    padding-top: 0rem;
+    @include zero-margin-left-right;
+  }
+
+  /* realigining images */
+  .block-projects:nth-of-type(2) {
+    @include top-margin-padding-zero;
+    margin-bottom: -5rem;
+  }
+
+  .block-projects:nth-of-type(3) {
+    @include top-margin-padding-zero;
+  }
+}
+
+@media screen and (max-width: 1265px) {
+
+  /* ~~~~~~~~~~~~~~~~~~~ about page ~~~~~~~~~~~~~~~~~~~~~~~~ */
+  .container-about {
+    @include one-margin-left-right;
+    justify-content: left;
+  }
+
+  .block-about {
+    flex: 0 100%;
+  }
+
+  .block-about p {
+    width: 100%;
+  }
+
+  .about-img {
+    align-self:center;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+  }
+}
+
+/* making the elements  fill up the page once the screen is a certain size */
+@media screen and (max-width: 1240px) {
+  /* ~~~~~~~~~~~~~~~~~poster page ~~~~~~~~~~~~~~~~~ */
+  .block-summary {
+    flex: 0 100%;
+  }
+}
+
+/* making the margins shrink before the nav buttons hit the logo in the top left */
+// @media screen and (max-width: 1143px) {
+@media screen and (max-width: 1231px) {
+  body {
+    @include one-margin-left-right;
+  }
+}
+
+// making the projects align properly on the project overview page
+@media screen and (min-width: 1800px) {
+  .container-projects {
+    @include flex-wrap-center;
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
+}
+
+// making the projects align properly on the project overview page
+@media screen and (min-width: 2190px) {
+  .container-projects {
+    @include flex-wrap-center;
+    margin-left: 20rem;
+    margin-right: 20rem;
+  }
+}
+
+/* MOBILE RESPONSIVENESS QUERIES */
+@media screen and (max-width: 800px) {
+  body {
+    margin-top: 0rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .image-link {
+    height: 30rem;
+    object-fit: cover;
+    vertical-align: bottom;
+  }
+}
+
+/* resizing the headings */
+@media screen and (max-width: 375px) {
+  h2 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,472 @@
+<!DOCTYPE HTML>
+<!--I used P02 as reference -->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title> Style Guide </title>
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/queries.css" rel="stylesheet">
+  <!-- linking the fade animations that must be loaded in header -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+
+<body>
+  <nav>
+    <!-- logo in the top left -->
+    <div class="topnav">
+      <div class="topnav-left">
+        <a href="projects.html">
+          <span class="logo"> Liam Tangilag </span>
+        </a>
+      </div>
+    </div>
+
+    <!-- reference for sidenav from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav -->
+    <!-- reference for making sidenav accessible with tab index https://knowbility.org/blog/2020/accessible-slide-menus/ -->
+    <button class="icon-right-justified" onclick="openNav()">&#9776;</button>
+    <div id="mySidenav" class="sidenav inactive">
+      <a href="javascript:void(0)" role="button" class="closebtn" aria-label="close navigation" onclick="closeNav()">&times;</a>
+      <a href="#interactive_elements">interactive elements</a>
+      <a href="#text_styling">text styling</a>
+      <a href="#combined_elements">combined elements</a>
+      <a href="#components">components</a>
+    </div>
+  </nav>
+
+  <section class="container-header">
+    <div class="block">
+      <header class="header-text-detailed">
+        <h1>Style Guide</h1>
+        <p>
+          the elements used to build my website.
+        </p>
+        <p><i class="arrow down"></i></p>
+      </header>
+    </div>
+  </section>
+
+
+  <!-- INTERACTIVE ELEMENTS SECTION -->
+  <section id="interactive_elements">
+    <h2> Interactive Elements </h2>
+
+    <section class="section-divider">
+      <h3> In-text link</h3>
+
+      <h4> CSS selector: </h4>
+      <p> .link </p>
+
+      <h4> Sample code: </h4>
+      <code>
+        &lt;p&gt; Click &lt;a class="link" href="https://www.sfu.ca/"&gt; here &lt;/a&gt; to find out more!/ &lt;p&gt;
+      </code>
+
+      <h4> Rendered element: </h4>
+      <p> Learn more <a class="link" href="https://www.sfu.ca/"> here </a> </p>
+    </section>
+
+    <section class="element">
+      <h3> Navigation button</h3>
+      <h4> CSS selector: </h4>
+      <p> .button-nav </p>
+
+      <h4> Sample code: </h4>
+      <code>
+        &lt;a class="button-nav" href="#home"&gt; Home&lt;/a&gt;
+      </code>
+
+      <h4> Rendered element: </h4>
+      <a class="button-nav" href="#branding_ideas"> read more </a>
+    </section>
+
+    <section class="element">
+      <!-- label reference from https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_label -->
+      <h3> Submit & Reset buttons </h3>
+      <h4> CSS selector: </h4>
+      <p>.button-form</p>
+
+      <h4> Sample code: </h4>
+      <code>
+        &lt;input class="button-form" type="submit" value="Submit"&gt; <br>
+        &lt;input class="button-form" type="reset" value="Reset"&gt; <br>
+      </code>
+
+      <h4> Rendered element </h4>
+      <input class="button-form" type="submit" value="Submit">
+      <input class="button-form" type="reset" value="Reset">
+    </section>
+
+    <section class="element">
+      <h3> Text input field </h3>
+      <!-- Input box reference from https://www.w3schools.com/tags/tag_input.asp -->
+
+      <h4> CSS selector: </h4>
+      <p> .input-text </p>
+      <p> .input-textlabel </p>
+
+      <h4> Sample code: </h4>
+      <code>
+        &lt;label class="input-textlabel" for="name"&gt; Name: &lt;/label&gt; <br>
+        &lt;input class="input-text" type="text" id = "name" name="name"&gt; <br>
+      </code>
+
+      <h4> Rendered element: </h4>
+      <form method="post" action="#">
+        <label class="input-text-label" for="name"> Name </label>
+        <input class="input-text" type="text" id="name" name="name">
+      </form>
+    </section>
+
+    <section class="element">
+      <!-- Radio button input reference: https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_radio -->
+      <h3> Radio button input field & label </h3>
+      <h4> CSS selector: </h4>
+      <p> input </p>
+      <p> label </p>
+
+      <h4> Sample code: </h4>
+
+      <code>
+        &lt;input type="radio" id="elem1" name="type" value="elem1"&gt; <br>
+        &lt;label for="car"&gt;element 1&lt;/label&gt;
+      </code>
+
+      <h4> Rendered element: </h4>
+      <form method="get" action="#">
+        <input type="radio" id="elem1" name="type" value="elem1">
+        <label for="elem1">element 1</label><br>
+        <input type="radio" id="elem2" name="type" value="elem2">
+        <label for="elem2">element 2</label><br>
+        <input type="radio" id="elem3" name="type" value="elem3">
+        <label for="elem3">element 3</label><br>
+      </form>
+    </section>
+
+    <section class="element">
+      <!-- Reference from https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_link_image -->
+      <h3> Image as a link </h3>
+      <h4> CSS selector: </h4>
+      <p> .block-projects </p>
+      <p> .image-link </p>
+
+      <h4> Sample code: </h4>
+      <code>
+        &lt;div class = "block-projects"&gt; <br>
+        &lt;a href = "https://www.sfu.ca/"&gt; <br>
+        &lt;img class="image-link" src="compressed-images/placeholder.jpg" alt="trim cleanse"&gt; <br>
+        &lt;/a&gt; <br>
+        &lt;/div&gt; <br>
+      </code>
+
+      <h4> Rendered element: </h4>
+      <section class="container-projects">
+        <div class="block-projects">
+          <a href="poster.html" onclick="this.focus()" class="imageAnchor" >
+            <img class="image-link" src="compressed-images/placeholder.jpg" alt="placeholder img">
+          </a>
+        </div>
+      </section>
+    </section>
+  </section>
+  <!-- END OF INTERACTIVE ELEMENTS SECTION -->
+
+  <!-- TEXT STYLING SECTION -->
+  <section id="text_styling">
+    <h2> Text Styling </h2>
+
+    <section class="section-divider">
+      <h3> A paragraph </h3>
+      <h4> CSS selector: </h4>
+      <p> p </p>
+
+      <h4> Sample code: </h4>
+      <code>
+        &lt;p&gt; Lorem ipsum... &lt;/p&gt;
+      </code>
+
+      <h4> Rendered element: </h4>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </section>
+
+    <section class="element">
+      <h3> Numbered lists </h3>
+      <h4> CSS Selector: </h4>
+      <p> li </p>
+
+      <h4> Sample code: </h4>
+      <code>
+        &lt;ol&gt;
+        &lt;li&gt; element 1 &lt;/li&gt;
+        &lt;/ol&gt;
+      </code>
+
+      <h4> Rendered element: </h4>
+      <ol>
+        <li> element 1 </li>
+        <li> element 2 </li>
+      </ol>
+
+    </section>
+
+    <section class="element">
+      <h3> Four levels of heading </h3>
+      <h4> CSS Selector: </h4>
+      <p> h1, h2, h3, h4 </p>
+
+      <h4> Sample code: </h4>
+      <code>
+        &lt;h1&gt; level 1 &lt;/h1&gt; <br>
+        &lt;h2&gt; level 2 &lt;/h2&gt; <br>
+        &lt;h3&gt; level 3 &lt;/h3&gt; <br>
+        &lt;h4&gt; level 4 &lt;/h4&gt; <br>
+      </code>
+
+      <h4> Rendered element: </h4>
+      <h1> level 1 </h1>
+      <h2> level 2 </h2>
+      <h3> level 3 </h3>
+      <h4> level 4 </h4>
+    </section>
+  </section>
+  <!-- END OF TEXT STYLING SECTION -->
+
+  <!-- COMBINED ELEMENTS SECTION -->
+  <section id="combined_elements">
+    <h2> Combined Elements </h2>
+    <section class="section-divider">
+      <h3> Project Listing Template </h3>
+      <div class="container-projects">
+        <div class="block-projects" data-aos-duration="1000" data-aos="fade-right">
+          <h2 class="divider"> project 1: poster </h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In cursus turpis massa tincidunt dui.
+          </p>
+          <p>
+            <a class="button-nav" role="button" href="#"> Read more </a>
+          </p>
+        </div>
+
+        <div class="block-projects">
+          <!-- making image respond to tab focus reference from http://jsfiddle.net/4x7wg7sb/1/ -->
+          <a href="poster.html" onclick="this.focus()" class="imageAnchor" >
+            <img class="image-link" src="compressed-images/placeholder.jpg" alt="mockup render of my poster">
+          </a>
+        </div>
+
+        <!-- making image respond to tab focus reference from http://jsfiddle.net/4x7wg7sb/1/ -->
+        <div class="block-projects" id=project2-desc>
+          <a href="kinetic.html" class="imageAnchor" onclick="this.focus()">
+            <img class="image-link" src="compressed-images/placeholder.jpg" alt="screenshot of my motion graphic">
+          </a>
+        </div>
+
+        <div class="block-projects" data-aos-duration="1000" data-aos="fade-left" id=project2-pic>
+          <h2 class="divider"> project 2: motion graphic</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In cursus turpis massa tincidunt dui.
+          </p>
+          <p>
+            <a class="button-nav" role="button" href="#"> Read more </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="element">
+      <h3> Detailed Project View Template </h3>
+
+      <div class="container-summary">
+        <h2 class="divider left-aligned"> 01. summary </h2>
+
+        <div class="block-summary panel">
+          <h3> objective </h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In cursus turpis massa tincidunt dui. Convallis posuere morbi leo urna molestie at. Consectetur libero id faucibus
+            nisl tincidunt eget nullam non nisi. Cursus turpis massa tincidunt dui.
+          </p>
+
+          <h3> programs used </h3>
+          <p>
+            Adobe Illustrator
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-detailed">
+      <h2 class="divider left-aligned"> 02. process </h2>
+
+      <div class="block-detailed">
+        <h3> a. sketches </h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In cursus turpis massa tincidunt dui. Convallis posuere morbi leo urna molestie at. Consectetur libero id faucibus
+          nisl tincidunt eget nullam non nisi. Cursus turpis massa tincidunt dui.
+        </p>
+      </div>
+
+      <div class="block-detailed" data-aos-duration="1000" data-aos="fade-up">
+        <img class="almost-full-width-img" src="compressed-images/placeholder.jpg" alt="logo and poster ideation sketches">
+      </div>
+
+      <div class="block-detailed">
+        <h3> b. initial render </h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In cursus turpis massa tincidunt dui. Convallis posuere morbi leo urna molestie at. Consectetur libero id faucibus
+          nisl tincidunt eget nullam non nisi. Cursus turpis massa tincidunt dui.
+        </p>
+      </div>
+
+      <div class="block-detailed" data-aos-duration="1000" data-aos="fade-up">
+        <img class="almost-full-width-img" src="compressed-images/placeholder.jpg" alt="initial illustrator render">
+      </div>
+
+      <div class="block-detailed">
+        <h3> c. outcome </h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In cursus turpis massa tincidunt dui. Convallis posuere morbi leo urna molestie at. Consectetur libero id faucibus
+          nisl tincidunt eget nullam non nisi. Cursus turpis massa tincidunt dui.
+        </p>
+      </div>
+
+      <div class="block-detailed" data-aos-duration="1000" data-aos="fade-up">
+        <img class="almost-full-width-img" src="compressed-images/placeholder.jpg" alt="final poster & render">
+      </div>
+
+      <div class="block-detailed" id="reflection-poster">
+        <h2 class="divider left-aligned"> 03. reflection </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In cursus turpis massa tincidunt dui. Convallis posuere morbi leo urna molestie at. Consectetur libero id faucibus
+          nisl tincidunt eget nullam non nisi. Cursus turpis massa tincidunt dui.
+        </p>
+        <p>
+          <a class="button-nav" role="button" href="projects.html"> back to projects</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="element">
+      <h3> About page template </h3>
+      <div class="container-about">
+        <div class="block-about" data-aos-duration="1000" data-aos="fade-right">
+          <h1> Lorem ipsum dolor sit</h1>
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In cursus turpis massa tincidunt dui. Convallis posuere morbi leo urna molestie at. Consectetur libero id
+            faucibus nisl tincidunt eget nullam non nisi. Cursus turpis massa tincidunt dui.
+          </p>
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In cursus turpis massa tincidunt dui. Convallis posuere morbi leo urna molestie at. Consectetur libero id
+            faucibus nisl tincidunt eget nullam non nisi. Cursus turpis massa tincidunt dui.
+          </p>
+        </div>
+
+        <div class="block-about">
+          <img class="about-img" src="compressed-images/placeholder.jpg" alt="test">
+        </div>
+      </div>
+    </section>
+
+    <section class="element">
+      <h3> Contact page template </h3>
+      <div class="container-contact">
+        <div class="block-contact">
+          <h1> Let's get in touch! </h1>
+          <p> If you want to collaborate or simply get in touch, I can be reached at: </p>
+          <strong> liam_tangilag@sfu.ca </strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="element">
+      <h3> Footer </h3>
+      <div class="section-divider-footer">
+        <div class="container-footer">
+          <p> ©2021 - Liam Tangilag | </p>
+          <a class="link" href="citations.html"> citations </a>
+          <a class="link" href="style-guide.html"> style guide </a>
+          <a class="link" href="https://github.com/leeummtee/P03"> github </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="element">
+      <h3> Main navigation </h3>
+      <div class="topnav">
+        <div class="topnav-left">
+          <a href="projects.html">
+            <span class="logo"> Liam Tangilag </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- reference for sidenav from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav -->
+      <div id="mySidenavStyleGuide" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="contact.html">contact</a>
+        <a href="about.html">about</a>
+        <div class="dropdown">
+          <!-- reference for dropdown from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar -->
+          <button class="dropbtn">projects <i class="small-arrow down"> </i>
+          </button>
+          <div class="dropdown-content">
+            <a href="projects.html"> overview</a>
+            <a href="poster.html"> poster</a>
+            <a href="kinetic.html"> motion graphic</a>
+          </div>
+        </div>
+      </div>
+      <!-- hamburger icon -->
+      <span class="icon-right-justified-styleguide" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </section>
+
+  </section>
+  <!-- END OF COMBINED ELEMENTS SECTION -->
+
+  <!-- COMPONENTS SECTION-->
+  <section id="components">
+    <h2> COMPONENTS </h2>
+    <section class="section-divider">
+      <h3> Fonts: </h3>
+      <h2 class="h2-sample"> Montserrat </h2>
+      <h2> Open Sans </h2>
+
+
+      <h3> Colour palettes: </h3>
+      <ul>
+        <li> monochromatic color scheme to allow my work to be the focus </li>
+        <li> simple and minimalist layout to align with my ethos </li>
+
+      </ul>
+
+      <!-- Colored rectangles reference from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_shapes_rectangle -->
+      <div class="rectangle1"> </div>
+      <p> #d6d6d6 ($light-grey)</p>
+      <div class="rectangle2"> </div>
+      <p> #808080 ($grey-hover)</p>
+      <div class="rectangle4"> </div>
+      <p> #000000 ($black)</p>
+      <div class="rectangle5"> </div>
+      <p> #DAA520 ($gold-color)</p>
+    </section>
+  </section>
+  <!-- END OF COMPONENTS SECTION -->
+
+
+  <footer class="section-divider-footer">
+    <div class="container-footer">
+      <p> ©2021 - Liam Tangilag | </p>
+      <a class="link" href="citations.html"> citations </a>
+      <a class="link" href="style-guide.html"> style guide </a>
+      <a class="link" href="https://github.com/leeummtee/P03"> github </a>
+    </div>
+  </footer>
+
+  <!-- fade effects -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
