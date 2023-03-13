@@ -1,75 +1,214 @@
-<!DOCTYPE HTML>
-<!--I used P02 as reference -->
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title> About </title>
-  <link href="css/main.css" rel="stylesheet">
-  <link href="css/queries.css" rel="stylesheet">
-  <!-- linking the fade animations that must be loaded in header -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+  <title>MyPortfolio Bootstrap Template - About</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyPortfolio
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body>
-  <nav>
-    <!-- logo in the top left -->
-    <div class="topnav">
-      <div class="topnav-left">
-        <a href="projects.html">
-          <span class="logo"> Liam Tangilag </span>
-        </a>
+
+  <!-- ======= Navbar ======= -->
+  <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
+    <div class="container py-2 py-md-5">
+      <div class="row align-items-start">
+        <div class="col-md-2">
+          <ul class="custom-menu">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="about.html">About Me</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="works.html">Works</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 d-none d-md-block  mr-auto">
+          <div class="tweet d-flex">
+            <span class="bi bi-twitter text-white mt-2 mr-3"></span>
+            <div>
+              <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore. <br> <a href="#">t.co/v82jsk</a></em></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-none d-md-block">
+          <h3>Hire Me</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiisexplicabo inventore. <br> <a href="#">myemail@gmail.com</a></p>
+        </div>
       </div>
+
     </div>
+  </div>
 
-    <!-- reference for sidenav from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav -->
-    <!-- reference for making sidenav accessible with tab index https://knowbility.org/blog/2020/accessible-slide-menus/ -->
-    <button class="icon-right-justified" onclick="openNav()">&#9776;</button>
-    <div id="mySidenav" class="sidenav inactive">
-      <a href="javascript:void(0)" role="button" class="closebtn" aria-label="close navigation" onclick="closeNav()">&times;</a>
-      <a href="contact.html">contact</a>
-      <a href="about.html">about</a>
-
-      <!-- drop down reference from https://stackoverflow.com/questions/35579569/hide-show-menu-onclick-javascript -->
-      <button id="menu" class="dropbtn" onclick="toggleMenu()"> projects <i class="small-arrow down"> </i></button>
-      <div id="menu-box" class="drop-content">
-        <a href="projects.html">overview</a>
-        <a href="poster.html">poster</a>
-        <a href="kinetic.html">motion graphic</a>
-      </div>
+  <nav class="navbar navbar-light custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">MyPortfolio.</a>
+      <a href="#" class="burger" data-bs-toggle="collapse" data-bs-target="#main-navbar">
+        <span></span>
+      </a>
     </div>
   </nav>
 
-  <section class="container-about">
-    <div class="block-about" data-aos-duration="1000" data-aos="fade-right">
-      <h1> Hey, I'm Liam! </h1>
-      <p>
-        I am currently a design student with a particular interest in minimalism and flat digital design. Enrolled in SFU’s Interactive Arts & Technology program, I am trying to further develop my design and programming skills with the eventual goal
-        of pursuing a career in app design.
-      </p>
-      <p>
-        With my current skillset, I believe I am best suited towards a pure digital design role that requires designing variety of company branding such as posters, motion graphics, kinetic typography, banners, or infographics.
-      </p>
-    </div>
+  <main id="main">
 
-    <div class="block-about">
-      <img class="about-img" src="compressed-images/me.jpg" alt="picture of me">
-    </div>
-  </section>
+    <section class="section pb-5">
+      <div class="container">
+        <div class="row mb-5 align-items-end">
+          <div class="col-md-6" data-aos="fade-up">
 
-  <footer class="section-divider-footer">
-    <div class="container-footer">
-      <p> ©2021 - Liam Tangilag | </p>
-      <a class="link" href="citations.html"> citations </a>
-      <a class="link" href="style-guide.html"> style guide </a>
-      <a class="link" href="https://github.com/leeummtee/P03"> github </a>
+            <h2>About Me</h2>
+            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut
+              officiis explicabo inventore.</p>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 ml-auto order-2" data-aos="fade-up">
+            <h3 class="h3 mb-4">Skills</h3>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <div class="d-flex mb-1">
+                  <strong>WordPress</strong>
+                  <span class="ml-auto">80%</span>
+                </div>
+                <div class="progress custom-progress">
+                  <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <div class="d-flex mb-1">
+                  <strong>Photoshop</strong>
+                  <span class="ml-auto">96%</span>
+                </div>
+                <div class="progress custom-progress">
+                  <div class="progress-bar" role="progressbar" style="width: 96%" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <div class="d-flex mb-1">
+                  <strong>HTML5/CSS3</strong>
+                  <span class="ml-auto">99%</span>
+                </div>
+                <div class="progress custom-progress">
+                  <div class="progress-bar" role="progressbar" style="width: 99%" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <div class="d-flex mb-1">
+                  <strong>Veu</strong>
+                  <span class="ml-auto">87%</span>
+                </div>
+                <div class="progress custom-progress">
+                  <div class="progress-bar" role="progressbar" style="width: 87%" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <div class="d-flex mb-1">
+                  <strong>Angular</strong>
+                  <span class="ml-auto">85%</span>
+                </div>
+                <div class="progress custom-progress">
+                  <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <div class="d-flex mb-1">
+                  <strong>React</strong>
+                  <span class="ml-auto">88%</span>
+                </div>
+                <div class="progress custom-progress">
+                  <div class="progress-bar" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-7 mb-5 mb-md-0" data-aos="fade-up">
+            <p><img src="assets/img/person_1_sq.jpg" alt="Image" class="img-fluid"></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor dignissimos delectus minima reprehenderit
+              molestias illo dolorem et, odio!</p>
+            <p>Fuga fugit distinctio delectus iure vitae consequatur excepturi, mollitia, consectetur molestias sapiente
+              rem consequuntur, illum adipisci, sed obcaecati!</p>
+            <p>Ex, dolorem qui voluptas reprehenderit provident, ad ipsum iure a consequatur voluptatem incidunt nobis.
+              Vitae reiciendis quae ex.</p>
+            <p>Optio consectetur culpa nemo, fugit pariatur veniam voluptate laudantium rerum fuga dolor in maiores ea
+              nisi voluptatibus. Minus?</p>
+            <p><a href="#" class="readmore">Download my CV</a></p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <p class="mb-1">&copy; Copyright MyPortfolio. All Rights Reserved</p>
+          <div class="credits">
+            <!--
+            All the links in the footer should remain intact.
+            You can delete the links only if you purchased the pro version.
+            Licensing information: https://bootstrapmade.com/license/
+            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=MyPortfolio
+          -->
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+        </div>
+        <div class="col-sm-6 social text-md-end">
+          <a href="#"><span class="bi bi-twitter"></span></a>
+          <a href="#"><span class="bi bi-facebook"></span></a>
+          <a href="#"><span class="bi bi-instagram"></span></a>
+          <a href="#"><span class="bi bi-linkedin"></span></a>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <!-- linking the animation library  -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <!-- linking javascript file -->
-  <script src="js/main.js"></script>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
+
+</html>
