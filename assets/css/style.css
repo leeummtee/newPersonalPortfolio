@@ -12,15 +12,20 @@
 body {
   font-family: "Inconsolata", monospace;
   color: #0d1e2d;
+  /* background-color:black; */
 }
 
 a {
-  color: #777;
+  /* color: green; */
   text-decoration: none;
 }
 
 a:hover {
-  color: #000;
+  color: white;
+}
+
+p {
+  color: black;
 }
 
 h1,
@@ -31,6 +36,7 @@ h5,
 h6,
 .font-heading {
   font-family: "Raleway", sans-serif;
+  color: black;
 }
 
 .section {
